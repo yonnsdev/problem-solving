@@ -8,5 +8,5 @@
 
 # All data & text goes before this table
 | Website | Solved | Recent |
-| --- | --- :|: --- |
-| LeetCode | 2 | [[002_LeetCode] 009_Palindrome Number.c](DAY 001-100/[002_LeetCode] 009_Palindrome Number.c) |
+| --- | ---: | :--- |
+| LeetCode | 2 | [[002_LeetCode] 009_Palindrome Number.c](DAY%20001-100/[002_LeetCode]%20009_Palindrome%20Number.c) |

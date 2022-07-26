@@ -33,9 +33,13 @@ def scan_dir():
                                 recent[ws].find("[", 1) + 1 : recent[ws].find("_")
                             ]
                         ):
-                            recent[ws] = f"[{i}]({x}/{i})"
+                            recent[
+                                ws
+                            ] = f"[{i}]({x.replace(' ', '%20')}/{i.replace(' ', '%20')}"
                     else:
-                        recent[ws] = f"[{i}]({x}/{i})"
+                        recent[
+                            ws
+                        ] = f"[{i}]({x.replace(' ', '%20')}/{i.replace(' ', '%20')})"
 
 
 def update_md():
@@ -48,7 +52,7 @@ def update_md():
         # remove all data till
         sl = int()
         for ln, line in enumerate(mdr, 1):  # ln : line-number
-            if line.startswith("| --- | --- :|: --- |"):
+            if line.startswith("| --- | ---: | :--- |"):
                 sl = ln
         mdr.seek(0)
         data = mdr.readlines()
