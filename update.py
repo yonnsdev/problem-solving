@@ -51,7 +51,7 @@ def update_md():
     dl = "||:|:|"  # divider line
 
     with open(file, "r") as mdr:  # mdr: markdown-read
-        # remove all data till
+        # remove all data till table divider line
         sl = int()
         for ln, line in enumerate(mdr, 1):  # ln : line-number
             if line.startswith("|"):
