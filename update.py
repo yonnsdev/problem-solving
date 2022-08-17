@@ -26,6 +26,7 @@ def scan_dir():
 
                     # Updates Recent
                     day = i[1 : i.find("_")]
+                    rbs = "\\_"
                     if ws in recent:
                         if (
                             day
@@ -35,11 +36,11 @@ def scan_dir():
                         ):
                             recent[
                                 ws
-                            ] = f"[{i}]({x.replace(' ', '%20')}/{i.replace(' ', '%20')}"
+                            ] = f"[{i.replace('_', f'{rbs}')}]({x.replace(' ', '%20')}/{i.replace(' ', '%20')})"
                     else:
                         recent[
                             ws
-                        ] = f"[{i}]({x.replace(' ', '%20')}/{i.replace(' ', '%20')})"
+                        ] = f"[{i.replace('_', f'{rbs}')}]({x.replace(' ', '%20')}/{i.replace(' ', '%20')})"
 
 
 def update_md():
@@ -47,13 +48,18 @@ def update_md():
     global recent
 
     file = "README.md"
+    dl = "||:|:|"  # divider line
 
     with open(file, "r") as mdr:  # mdr: markdown-read
         # remove all data till
         sl = int()
         for ln, line in enumerate(mdr, 1):  # ln : line-number
-            if line.startswith("| --- | ---: | :--- |"):
-                sl = ln
+            if line.startswith("|"):
+                line = line.replace("-", "")
+                line = line.replace(" ", "").strip()
+                if line == dl:
+                    sl = ln
+                    break
         mdr.seek(0)
         data = mdr.readlines()
         dlen = len(data)
