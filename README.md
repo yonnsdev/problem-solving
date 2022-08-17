@@ -1,5 +1,5 @@
 <div align="center"> 
-  <h3>A question a day</h3>
+  <h3>A problem a day</h3>
   <h1>Problem Solving</h1>
   
   [![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)](#)
