@@ -8,5 +8,5 @@
 
 | Website  | Solved | Recent                                                                                             |
 | -------- | -----: | :------------------------------------------------------------------------------------------------- |
-| Baekjoon |     17 | [[019_Baekjoon] 9498\_시험 성적.cpp](DAY%20001-100/[019_Baekjoon]%209498_시험%20성적.cpp)          |
+| Baekjoon |     18 | [[020_Baekjoon] 2753\_윤년.cpp](DAY%20001-100/[020_Baekjoon]%202753_윤년.cpp)                      |
 | LeetCode |      2 | [[002_LeetCode] 009_Palindrome Number.c](DAY%20001-100/[002_LeetCode]%20009_Palindrome%20Number.c) |

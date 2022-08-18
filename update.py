@@ -16,7 +16,9 @@ def scan_dir():
     for x in os.listdir():
         if x.startswith("DAY"):
             for i in os.listdir(x):
-                if not i.startswith("."):  # Removes .DS_COUNT
+                if not i.startswith(".") and not i.endswith(
+                    ".out"
+                ):  # Ignores .DS_Count && .out files
                     # Addes to count
                     ws = i[i.find("_") + 1 : i.find("]")]
                     if ws in problems:
